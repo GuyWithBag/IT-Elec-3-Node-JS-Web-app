@@ -1,5 +1,5 @@
 const http = require("http");
-const express = require("express");
+const fs = require("fs");
 
 const server = http.createServer((req, res) => {
 	res.setHeader("Content-Type", "text/html");
@@ -9,7 +9,13 @@ const server = http.createServer((req, res) => {
 		myurl += "/index.html";
 		res.statusCode = 200;
 	} else if (req.url === "/about") {
-		myurl += "/about.html";
+		myurl += "/about-us.html";
+		res.statusCode = 200;
+	} else if (req.url === "/contacts") {
+		myurl += "/contact-us.html";
+		res.statusCode = 200;
+	} else if (req.url === "/products") {
+		myurl += "/products.html";
 		res.statusCode = 200;
 	} else {
 		myurl += "/error.html";

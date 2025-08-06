@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Hotdog Heaven Catering - Home</title>
+		<title>Contact Us - Hotdog Heaven Catering</title>
 		<style>
 			body {
 				font-family: Arial, sans-serif;
@@ -57,36 +57,47 @@
 				text-align: center;
 				margin-bottom: 20px;
 			}
-			p {
-				margin-bottom: 15px;
-			}
-			.hero {
-				text-align: center;
-				padding: 50px 20px;
-				background-color: #ffd700; /* Gold */
-				color: #333;
-				border-radius: 8px;
+			.contact-info,
+			.contact-form {
 				margin-bottom: 30px;
+				padding: 20px;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+				background-color: #f9f9f9;
 			}
-			.hero h2 {
-				font-size: 2.5em;
+			.contact-info p {
 				margin-bottom: 10px;
-				color: #ff6347;
 			}
-			.hero p {
-				font-size: 1.2em;
-				margin-bottom: 20px;
+			.contact-form label {
+				display: block;
+				margin-bottom: 5px;
+				font-weight: bold;
 			}
-			.btn {
-				display: inline-block;
+			.contact-form input[type="text"],
+			.contact-form input[type="email"],
+			.contact-form textarea {
+				width: calc(100% - 20px);
+				padding: 10px;
+				margin-bottom: 15px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				font-size: 1em;
+			}
+			.contact-form textarea {
+				resize: vertical;
+				min-height: 100px;
+			}
+			.contact-form button {
 				background-color: #ff6347;
 				color: white;
-				padding: 10px 20px;
-				text-decoration: none;
+				padding: 12px 25px;
+				border: none;
 				border-radius: 5px;
+				cursor: pointer;
+				font-size: 1.1em;
 				transition: background-color 0.3s ease;
 			}
-			.btn:hover {
+			.contact-form button:hover {
 				background-color: #cd5c5c; /* Indian Red */
 			}
 			footer {
@@ -113,32 +124,39 @@
 		</header>
 
 		<main class="container">
-			<section class="hero">
-				<h2>Your Event, Our Delicious Hotdogs!</h2>
+			<h2>Get in Touch with Hotdog Heaven!</h2>
+
+			<section class="contact-info">
+				<h3>Our Contact Details</h3>
 				<p>
-					Bringing the best hotdog experience directly to your party, corporate
-					event, or family gathering.
+					Have questions or ready to book your hotdog catering experience? Reach
+					out to us!
 				</p>
-				<a href="contact.html" class="btn">Get a Quote Today!</a>
+				<p>
+					<strong>Email:</strong>
+					<a href="mailto:info@hotdogheaven.com">info@hotdogheaven.com</a>
+				</p>
+				<p><strong>Phone:</strong> (123) 456-7890</p>
+				<p><strong>Address:</strong> 123 Hotdog Lane, Flavorville, HD 98765</p>
 			</section>
 
-			<section>
-				<h2>Why Choose Hotdog Heaven?</h2>
-				<p>
-					At Hotdog Heaven Catering, we believe in serving joy, one delicious
-					hotdog at a time. We use only the freshest ingredients, premium
-					hotdogs, and a variety of mouth-watering toppings to create a
-					memorable culinary experience for your guests.
-				</p>
-				<p>
-					Whether it's a small backyard BBQ or a large community event, our
-					professional team handles everything from setup to serving, ensuring a
-					hassle-free experience for you. We offer customizable packages to fit
-					your specific needs and budget.
-				</p>
-				<p>
-					Let us take care of the food, so you can focus on enjoying your event!
-				</p>
+			<section class="contact-form">
+				<h3>Send Us a Message</h3>
+				<form action="#" method="POST">
+					<label for="name">Your Name:</label>
+					<input type="text" id="name" name="name" required />
+
+					<label for="email">Your Email:</label>
+					<input type="email" id="email" name="email" required />
+
+					<label for="subject">Subject:</label>
+					<input type="text" id="subject" name="subject" />
+
+					<label for="message">Your Message:</label>
+					<textarea id="message" name="message" required></textarea>
+
+					<button type="submit">Send Message</button>
+				</form>
 			</section>
 		</main>
 
